@@ -4,6 +4,7 @@ public class Validator {
     private Validator() {
     }
 
+
     public static boolean validate(String login, String password, String confirmPassword) {
         try {
             checkUsingLoop(login, password, confirmPassword);
@@ -13,7 +14,6 @@ public class Validator {
             return false;
         }
     }
-
     private static void checkUsingLoop(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
         if (login != null && login.length() <= 20) {
             if (password != null && password.equals(confirmPassword)) {
